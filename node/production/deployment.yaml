@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: node
   name: node-deploy
   labels:
     app: node
@@ -26,7 +27,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nodeapp-svc
-  namespace: nodeapp
+  namespace: node
 spec:
   selector:
     app: nodeapp
