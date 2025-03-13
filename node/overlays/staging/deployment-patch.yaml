@@ -1,9 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-deploy
-  labels:
-    app: node
+  namespace: node
+  name: node
 spec:
   replicas: 2
   template:
