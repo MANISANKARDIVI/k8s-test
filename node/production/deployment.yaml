@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: node
-  name: node-deploy
+  name: node
   labels:
     app: node
 spec:
@@ -30,7 +30,7 @@ metadata:
   namespace: node
 spec:
   selector:
-    app: nodeapp
+    app: node
   ports:
   - protocol: TCP
     port: 3000
