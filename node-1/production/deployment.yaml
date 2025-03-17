@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: node-container
-          image: manisankardivi/node-test:6.0.104
+          image: manisankardivi/node-1-test:25.3.18
           imagePullPolicy: Always
           ports:
             - containerPort: 80
