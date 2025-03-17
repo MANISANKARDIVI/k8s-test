@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: node
+  name: node
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+        - name: node-container
+          image: manisankardivi/new:6.0.104
