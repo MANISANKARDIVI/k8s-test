@@ -6,7 +6,7 @@ metadata:
   labels:
     app: node
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: node
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: node-container
-          image: manisankardivi/node-test:6.0.104
+          image: registry.digitalocean.com/elitebidder/mani-testing
           imagePullPolicy: Always
           ports:
             - containerPort: 80
