@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: node-container
-          image: registry.digitalocean.com/elitebidder/mani-testing:latest
+          image: registry.digitalocean.com/elitebidder/mani-testing-go:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
