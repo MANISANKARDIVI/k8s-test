@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: node
-  name: node
+  namespace: go-test
+  name: go
   labels:
-    app: node
+    app: go
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: node
+      app: go
   template:
     metadata:
       labels:
-        app: node
+        app: go
     spec:
       containers:
-        - name: node-container
-          image: manisankardivi/node-2-test:6.0.104
+        - name: go-container
+          image: registry.digitalocean.com/elitebidder/mani-testing-go:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
@@ -26,11 +26,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodeapp-svc
-  namespace: node
+  name: go-svc
+  namespace: go-test
 spec:
   selector:
-    app: node
+    app: go
   ports:
     - protocol: TCP
       port: 80
