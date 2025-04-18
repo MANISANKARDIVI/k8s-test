@@ -5,5 +5,5 @@ resources:
   - ../../production
 
 patches:
-  - path: deployment-patch.yaml
+  - path: node-deployment-patch.yaml
 
